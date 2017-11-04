@@ -9,8 +9,9 @@ RUN apt-get install -y bzip2
 RUN apt-get install -y git
 RUN apt-get install -y make g++
 
-# get anaconda
+# install anaconda
 RUN wget https://repo.continuum.io/archive/Anaconda3-5.0.1-Linux-x86_64.sh
+RUN sh Anaconda3-5.0.1-Linux-x86_64.sh -u
 
 # build as CPU mode
 ENV NO_CUDA 1
